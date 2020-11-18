@@ -164,7 +164,8 @@ namespace argos {
          SAnchor& cCameraAnchor =
             m_pcEmbodiedEntity->AddAnchor(
                "camera",
-               CVector3(BODY_RADIUS, 0.0f, 0.0f));
+               CVector3(BODY_RADIUS, 0.0f, 0.0f),
+               CQuaternion(0.707,0,0.707,0));
          m_pcPerspectiveCameraEquippedEntity = new CPerspectiveCameraEquippedEntity(
             this,
             "perspective_camera_0",
