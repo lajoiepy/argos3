@@ -93,6 +93,14 @@ namespace argos {
          m_fMass = f_mass;
       }
 
+      inline const CVector3& GetColor() const {
+         return m_cColor;
+      }
+
+      inline void SetColor(const CVector3& c_color) {
+         m_cColor = c_color;
+      }
+
       virtual std::string GetTypeDescription() const {
          return "box";
       }
@@ -104,6 +112,7 @@ namespace argos {
       CVector3            m_cSize;
       Real                m_fMass;
       CLEDMedium*         m_pcLEDMedium;
+      CVector3            m_cColor;
 
    };
 

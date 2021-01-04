@@ -20,7 +20,8 @@ namespace argos {
       m_pcEmbodiedEntity(NULL),
       m_pcLEDEquippedEntity(NULL),
       m_fMass(1.0f),
-      m_pcLEDMedium(NULL) {}
+      m_pcLEDMedium(NULL),
+      m_cColor(0.7f, 0.7f, 0.7f)  {}
 
    /****************************************/
    /****************************************/
@@ -42,7 +43,8 @@ namespace argos {
          new CLEDEquippedEntity(this,
                                 "leds_0")),
       m_cSize(c_size),
-      m_fMass(f_mass) {
+      m_fMass(f_mass),
+      m_cColor(0.7f, 0.7f, 0.7f) {
       AddComponent(*m_pcEmbodiedEntity);
       AddComponent(*m_pcLEDEquippedEntity);
    }
