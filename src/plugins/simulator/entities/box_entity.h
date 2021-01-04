@@ -97,8 +97,13 @@ namespace argos {
          return m_cColor;
       }
 
-      inline void SetColor(const CVector3& c_color) {
+      inline const float& GetAlpha() const {
+         return m_fAlpha;
+      }
+
+      inline void SetColor(const CVector3& c_color, const float& f_alpha) {
          m_cColor = c_color;
+         m_fAlpha = f_alpha;
       }
 
       virtual std::string GetTypeDescription() const {
@@ -113,6 +118,7 @@ namespace argos {
       Real                m_fMass;
       CLEDMedium*         m_pcLEDMedium;
       CVector3            m_cColor;
+      float               m_fAlpha;
 
    };
 

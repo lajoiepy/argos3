@@ -91,7 +91,9 @@ namespace argos {
          glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE, MOVABLE_COLOR);
       }
       else {
-         GLfloat color[4] = { c_entity.GetColor().GetX(), c_entity.GetColor().GetY(), c_entity.GetColor().GetZ(), 1.0f };
+         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+         glEnable( GL_BLEND );
+         GLfloat color[4] = { c_entity.GetColor().GetX(), c_entity.GetColor().GetY(), c_entity.GetColor().GetZ(), c_entity.GetAlpha() };
          glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE, color);
       }
       glPushMatrix();
